@@ -1,14 +1,16 @@
 <html>
 <title>DEAF</title>
-<script>
-function test(){
-  alert("Hello world!");
-}
-</script>
 
 <body>
 
 <button type="button" onclick="test()">testing</button>
+
+<script>
+function test(){
+  alert("Hello world!");
+  console.log(Notification.permission);
+}
+</script>
 
   <div>Teachable Machine Audio Model</div>
   <button type="button" onclick="init()">Start</button>
