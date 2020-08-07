@@ -8,6 +8,7 @@ h1{
 background-color:rgba(0, 207, 86, 0.2);
 border: 2px solid powderblue;
   padding: 50px;
+  padding-top: 12.5%;
 }
 button{
    width: 100%;
@@ -16,18 +17,28 @@ button{
 padding: 25px;
 background-color:rgb(255,0,0,0.5);
 border: 2px solid rgba(255,0,0,0.7);
+padding-top: 12.5%;
 }
 h2{
   font-size: 500%;
 padding: 25px;
 background-color:rgb(255,209,0,0.4);
 border: 2px solid rgba(255,209,0,0.7);
+padding-top: 12.5%;
 }
 h3{
   font-size: 500%;
 padding: 10px;
 background-color:rgb(0,146,255,0.5);
 border: 2px solid rgba(0,146,255,0.7);
+padding-top: 12.5%;
+}
+h4{
+  font-size: 500%;
+padding: 10px;
+background-color:rgb(0,146,255,0.5);
+border: 2px solid rgba(0,146,255,0.7);
+padding-top: 25%;
 }
 select{
 font-size: 100%;
@@ -46,9 +57,10 @@ function NF(){
 </script>
 
 <center><button type="button" onclick="init()">Start</button></center>
+<h2 align="center">偵測結果</h2>
 <div id="label-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-<h2 align="center">偵測結果</h2>
+
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
 
 <script type="text/javascript">
@@ -110,7 +122,7 @@ function NF(){
     }
   </script>
   <h3 align="center">MTR</h3>
-  <h3 >由
+  <h4 >由
 <form >
 <select name="in">
   <option value=""></option>
@@ -154,6 +166,6 @@ function NF(){
   <option value="中環">中環</option>
 </select>
 </form>
-</h3>
+</h4>
 </body>
 </html>
