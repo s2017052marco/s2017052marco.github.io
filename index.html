@@ -19,8 +19,8 @@ function test(){
     NF();
   }
   else if (Notification.permission==="denied"){
-      Notification.requestPermission().then(permissiom=>{
-        if (permissiom==="granted"){
+      Notification.requestPermission().then(permission=>{
+        if (permission==="granted"){
       //alert("granted");
           NF();
         }
