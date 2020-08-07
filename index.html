@@ -3,15 +3,21 @@
 <head>
 <style>
 h1{
-
   font-family: verdana;
   font-size: 1000%;
 background-color:rgba(0, 207, 86, 0.2);
 border: 2px solid powderblue;
   padding: 100px;
 }
-h2{
+button{
+   width: 100%;
   font-family: verdana;
+  font-size: 100%;
+padding: 50px;
+background-color:rgb(255,0,0,0.5);
+border: 2px solid rgba(255,0,0,0.8);
+}
+h2{
   font-size: 500%;
 padding: 50px;
 background-color:rgb(255,209,0,0.4);
@@ -19,16 +25,9 @@ border: 2px solid rgba(255,209,0,0.7);
 }
 h3{
   font-size: 500%;
-padding: 50px;
+padding: 10px;
 background-color:rgb(0,146,255,0.5);
 border: 2px solid rgba(0,146,255,0.7);
-}
-button{
-  font-family: verdana;
-  font-size: 100%;
-padding: 50px;
-background-color:rgb(255,209,0,0.4);
-border: 2px solid rgba(255,209,0,0.7);
 }
 select{
 font-size: 100%;
@@ -36,8 +35,7 @@ font-size: 100%;
 </head>
 </style>
 <body>
-<h1 align="center"><I>DEAF</Font></I></h1>
-<h2 align="center">偵測結果</h2>
+<h1 align="center"><I>DEAF</I></h1>
 
 <script>
 function NF(){
@@ -47,9 +45,10 @@ function NF(){
 
 </script>
 
-<button type="button" onclick="init()">Start</button>
+<center><button type="button" onclick="init()">Start</button></center>
 <div id="label-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<h2 align="center">偵測結果</h2>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
 
 <script type="text/javascript">
@@ -112,7 +111,7 @@ function NF(){
   </script>
   <h3 align="center">MTR</h3>
   <h3 >由
-<form>
+<form >
 <select name="in">
   <option value=""></option>
 　<option value="荃灣">荃灣</option>
