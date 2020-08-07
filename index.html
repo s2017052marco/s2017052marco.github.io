@@ -29,7 +29,6 @@ border: 2px solid rgba(255,209,0,0.7);
 <body>
 <h1 align="center"><I>DEAF</Font></I></h1>
 <h2 align="center">偵測結果</h2>
-<button type="button" onclick="test()">testing</button>
 
 <script>
 function NF(){
@@ -37,23 +36,6 @@ function NF(){
   window.navigator.vibrate([1000,200,1000]);
 }
 
-
-function test(){
-//granted,denied,default
-  console.log(Notification.permission);
-  if (Notification.permission==="granted"){
-    //alert("granted");
-    NF();
-  }
-  else if (Notification.permission==="denied"){
-      Notification.requestPermission().then(permission=>{
-        if (permission==="granted"){
-      //alert("granted");
-          NF();
-        }
-      })
-    }
-}
 </script>
 
 <button type="button" onclick="init()">Start</button>
