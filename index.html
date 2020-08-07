@@ -9,6 +9,13 @@
 function test(){
   alert("Hello world!");
   console.log(Notification.permission);
+  if (Notification.permission==="granted"){
+    alert("granted");
+  }
+  else if (Notification.permission==="denied"){
+      Notification.requestPermission().then(permissiom=>{
+        
+      })
 }
 </script>
 
