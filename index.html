@@ -6,16 +6,26 @@
 <button type="button" onclick="test()">testing</button>
 
 <script>
+function NF(){
+  const notification = new Notification("This is an NF!!")
+}
+
+
 function test(){
-  alert("Hello world!");
+  
   console.log(Notification.permission);
   if (Notification.permission==="granted"){
-    alert("granted");
+    //alert("granted");
+    NF();
   }
   else if (Notification.permission==="denied"){
       Notification.requestPermission().then(permissiom=>{
-        
+        if (permissiom==="granted"){
+      //alert("granted");
+          NF();
+        }
       })
+    }
 }
 </script>
 
