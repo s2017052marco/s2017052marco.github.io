@@ -65,7 +65,7 @@ font-size: 100%;
 <script>
 function NF(){
   const notification = new Notification("This is an NF!!");
-  window.navigator.vibrate([1000,200,1000]);
+  window.navigator.vibrate([500,200,500]);
 }
 
 </script>
@@ -123,7 +123,7 @@ function NF(){
             if (result.scores[1]>=0.9) {
               NF(classLabels[1]);
               alert(classLabels[1]);
-            
+
               }
 
         }, {
