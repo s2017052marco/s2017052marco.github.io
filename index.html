@@ -120,9 +120,11 @@ function NF(){
             NF(classLabels[i]);
             alert(classLabels[i]);
             document.getElementById("1234").innerHTML="<font color='blue'>messages[i]</font>";
-          }
-          }
-        {
+                const classPrediction = classLabels[i] + ": " + result.scores[i].toFixed(2);
+                labelContainer.childNodes[i].innerHTML = classPrediction;
+            }
+
+        }, {
             includeSpectrogram: true, // in case listen should return result.spectrogram
             probabilityThreshold: 0.75,
             invokeCallbackOnNoiseAndUnknown: true,
