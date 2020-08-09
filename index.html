@@ -117,14 +117,14 @@ function NF(){
                 const classPrediction = classLabels[i] + ": " + result.scores[i].toFixed(2);
                 labelContainer.childNodes[i].innerHTML = classPrediction;
             }
-            if (result.scores[1]>=0.9) {
-              NF(classLabels[1]);
-              alert(classLabels[1]);
-             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
-             }
-             if (result.scores[2]>=0.9) {
+            if (result.scores[2]>=0.9) {
               NF(classLabels[2]);
               alert(classLabels[2]);
+             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
+             }
+             if (result.scores[1]>=0.9) {
+              NF(classLabels[1]);
+              alert(classLabels[1]);
               document.getElementById("1234").innerHTML="<font color='blue'>紅燈</font>";
              }
         }, {
