@@ -191,11 +191,6 @@ function NF(){
               alert(classLabels[15]);
              document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
               }
-              if (result.scores[16]>=0.9) {
-              NF(classLabels[16]);
-              alert(classLabels[16]);
-             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
-              }
         }, {
             includeSpectrogram: true, // in case listen should return result.spectrogram
             probabilityThreshold: 0.75,
@@ -207,7 +202,7 @@ function NF(){
         // setTimeout(() => recognizer.stopListening(), 5000);
     }
 </script>
-  <p align="center" id="1234">	</p>
+<p align="center" id="1234">	</p>
   <h3 align="center">MTR	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/MTR_logo.svg/1265px-MTR_logo.svg.png"width=63.25 height=51.2 >
 </h3>
   <h4 >去
