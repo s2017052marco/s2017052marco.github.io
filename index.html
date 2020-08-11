@@ -59,20 +59,6 @@ font-size: 100%;
 }
 </head>
 </style>
-<body>
-<h1 align="center"><I>DEAF</I></h1>
-
-<script>
-function NF(){
-  const notification = new Notification("This is an NF!!");
-  window.navigator.vibrate([250,500,250]);
-}
-
-</script>
-
-<center><button type="button" onclick="init()">Start</button></center>
-<h2 align="center">偵測結果</h2>
-<div id="label-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
 
@@ -199,6 +185,21 @@ function NF(){
         // setTimeout(() => recognizer.stopListening(), 5000);
     }
 </script>
+<body>
+<h1 align="center"><I>DEAF</I></h1>
+
+<script>
+function NF(){
+  const notification = new Notification("This is an NF!!");
+  window.navigator.vibrate([250,500,250]);
+}
+
+</script>
+
+<center><button type="button" onclick="init()">Start</button></center>
+<h2 align="center">偵測結果</h2>
+<div id="label-container"></div>
+
   <p align="center" id="1234">	</p>
   <h3 align="center">MTR	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/MTR_logo.svg/1265px-MTR_logo.svg.png"width=63.25 height=51.2 >
 </h3>
