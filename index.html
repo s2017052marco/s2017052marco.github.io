@@ -57,8 +57,6 @@ padding-top: 10%;
 select{
 font-size: 100%;
 }
-var messages=[" ","紅燈","綠燈","閃燈","大窩口站","救護車","消防車","火警鐘","叫你","荃灣站","荔景站","葵興站","葵芳站","警車","有車"];
-"];
 </head>
 </style>
 <body>
@@ -74,8 +72,9 @@ function NF(){
 
 <center><button type="button" onclick="init()">Start</button></center>
 <h2 align="center">偵測結果</h2>
-<div id="label-container"></div>
+<center><div id="label-container"></div></center>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
 
 <script type="text/javascript">
@@ -83,7 +82,7 @@ function NF(){
     // https://github.com/tensorflow/tfjs-models/tree/master/speech-commands
 
     // the link to your model provided by Teachable Machine export panel
-    const URL = "https://teachablemachine.withgoogle.com/models/b_T1FykK1/";
+    const URL = "https://teachablemachine.withgoogle.com/models/2vxVOptM4/";
 
     async function createModel() {
         const checkpointURL = URL + "model.json"; // model topology
@@ -116,9 +115,15 @@ function NF(){
             const scores = result.scores; // probability of prediction for each class
             // render the probability scores per class
             for (let i = 0; i < classLabels.length; i++) {
-              const classPrediction = classLabels[i] + ": " + result.scores[i].toFixed(2);
+                const classPrediction = classLabels[i] + ": " + result.scores[i].toFixed(2);
                 labelContainer.childNodes[i].innerHTML = classPrediction;
             }
+
+            if (result.scores[1]>=0.9) {
+              NF(classLabels[1]);
+              alert(classLabels[1]);
+             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
+              }
 
         }, {
             includeSpectrogram: true, // in case listen should return result.spectrogram
@@ -126,17 +131,11 @@ function NF(){
             invokeCallbackOnNoiseAndUnknown: true,
             overlapFactor: 0.50 // probably want between 0.5 and 0.75. More info in README
         });
-        for (let i = 0; i < classLabels.length; i++) {
-            if(result.scores[i]>=0.9&&classLabels[i]!=messages){
-            NF(classLabels[i]);
-            alert(classLabels[i]);
-            document.getElementById("1234").innerHTML="<font color='blue'>messages[i]</font>";
-            }
 
         // Stop the recognition in 5 seconds.
         // setTimeout(() => recognizer.stopListening(), 5000);
     }
-</script>
+  </script>
   <p align="center" id="1234">	</p>
   <h3 align="center">MTR	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/MTR_logo.svg/1265px-MTR_logo.svg.png"width=63.25 height=51.2 >
 </h3>
