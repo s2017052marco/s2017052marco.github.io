@@ -72,9 +72,8 @@ function NF(){
 
 <center><button type="button" onclick="init()">Start</button></center>
 <h2 align="center">偵測結果</h2>
-<center><div id="label-container"></div></center>
+<div id="label-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
 
 <script type="text/javascript">
@@ -82,7 +81,7 @@ function NF(){
     // https://github.com/tensorflow/tfjs-models/tree/master/speech-commands
 
     // the link to your model provided by Teachable Machine export panel
-    const URL = "https://teachablemachine.withgoogle.com/models/2vxVOptM4/";
+    const URL = "https://teachablemachine.withgoogle.com/models/b_T1FykK1/";
 
     async function createModel() {
         const checkpointURL = URL + "model.json"; // model topology
@@ -118,13 +117,85 @@ function NF(){
                 const classPrediction = classLabels[i] + ": " + result.scores[i].toFixed(2);
                 labelContainer.childNodes[i].innerHTML = classPrediction;
             }
-
             if (result.scores[1]>=0.9) {
               NF(classLabels[1]);
               alert(classLabels[1]);
              document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
               }
-
+              if (result.scores[2]>=0.9) {
+              NF(classLabels[2]);
+              alert(classLabels[2]);
+             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
+             }
+             if (result.scores[3]>=0.9) {
+              NF(classLabels[3]);
+              alert(classLabels[3]);
+             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
+              }
+              if (result.scores[4]>=0.9) {
+              NF(classLabels[4]);
+              alert(classLabels[4]);
+             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
+              }
+              if (result.scores[5]>=0.9) {
+              NF(classLabels[5]);
+              alert(classLabels[5]);
+             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
+              }
+              if (result.scores[6]>=0.9) {
+              NF(classLabels[6]);
+              alert(classLabels[6]);
+             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
+              }
+              if (result.scores[7]>=0.9) {
+              NF(classLabels[7]);
+              alert(classLabels[7]);
+             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
+              }
+              if (result.scores[8]>=0.9) {
+              NF(classLabels[8]);
+              alert(classLabels[8]);
+             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
+              }
+              if (result.scores[9]>=0.9) {
+              NF(classLabels[9]);
+              alert(classLabels[9]);
+             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
+              }
+              if (result.scores[10]>=0.9) {
+              NF(classLabels[10]);
+              alert(classLabels[10]);
+             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
+              }if (result.scores[11]>=0.9) {
+              NF(classLabels[11]);
+              alert(classLabels[11]);
+             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
+              }
+              if (result.scores[12]>=0.9) {
+              NF(classLabels[12]);
+              alert(classLabels[12]);
+             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
+              }
+              if (result.scores[13]>=0.9) {
+              NF(classLabels[13]);
+              alert(classLabels[13]);
+             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
+              }
+              if (result.scores[14]>=0.9) {
+              NF(classLabels[14]);
+              alert(classLabels[14]);
+             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
+              }
+              if (result.scores[15]>=0.9) {
+              NF(classLabels[15]);
+              alert(classLabels[15]);
+             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
+              }
+              if (result.scores[16]>=0.9) {
+              NF(classLabels[16]);
+              alert(classLabels[16]);
+             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
+              }
         }, {
             includeSpectrogram: true, // in case listen should return result.spectrogram
             probabilityThreshold: 0.75,
@@ -135,20 +206,11 @@ function NF(){
         // Stop the recognition in 5 seconds.
         // setTimeout(() => recognizer.stopListening(), 5000);
     }
-  </script>
+</script>
   <p align="center" id="1234">	</p>
   <h3 align="center">MTR	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/MTR_logo.svg/1265px-MTR_logo.svg.png"width=63.25 height=51.2 >
 </h3>
-  <h4 >由
-<select name="in">
-  <option value=""></option>
-　<option value="in荃灣">荃灣</option>
-　<option value="in大窩口">大窩口</option>
-　<option value="in葵興">葵興</option>
-　<option value="in葵芳">葵芳</option>
-  <option value="in荔景">荔景</option>
-</select>
-去
+  <h4 >去
 <select name="to">
   <option value=""></option>
 　<option value="to荃灣">荃灣</option>
