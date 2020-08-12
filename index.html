@@ -151,31 +151,31 @@ function NF(){
               alert(classLabels[7]);
              document.getElementById("1234").innerHTML="<font color='blue'>叫你</font>";
               }
-              if (result.scores[8]>=0.9 && "to"=="to荔景") {
+              if (result.scores[8]>=0.9 && "to"="to荃灣") {
               NF(classLabels[8]);
               alert(classLabels[8]);
-             document.getElementById("1234").innerHTML="<font color='blue'>荔景站</font>";
+             document.getElementById("1234").innerHTML="<font color='blue'>荃灣站</font>";
               }
-              if (result.scores[9]>=0.9 && "to"=="to葵芳") {
+              if (result.scores[9]>=0.9 && "to"="to荔景") {
               NF(classLabels[9]);
               alert(classLabels[9]);
-             document.getElementById("1234").innerHTML="<font color='blue'>葵芳站</font>";
+             document.getElementById("1234").innerHTML="<font color='blue'>荔景站</font>";
               }
-              if (result.scores[10]>=0.9) {
+              if (result.scores[10]>=0.9 && "to"="to葵芳") {
               NF(classLabels[10]);
               alert(classLabels[10]);
-             document.getElementById("1234").innerHTML="<font color='blue'>警車</font>";
+             document.getElementById("1234").innerHTML="<font color='blue'>葵芳站</font>";
               }
               if (result.scores[11]>=0.9) {
               NF(classLabels[11]);
               alert(classLabels[11]);
-             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
-             }
-             if (result.scores[12]>=0.9 && "to"=="to荃灣") {
+             document.getElementById("1234").innerHTML="<font color='blue'>警車</font>";
+              }
+              if (result.scores[12]>=0.9) {
               NF(classLabels[12]);
               alert(classLabels[12]);
-             document.getElementById("1234").innerHTML="<font color='blue'>荃灣站</font>";
-              }
+             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
+             }
         }, {
             includeSpectrogram: true, // in case listen should return result.spectrogram
             probabilityThreshold: 0.75,
