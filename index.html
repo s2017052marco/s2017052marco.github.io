@@ -119,49 +119,49 @@ function NF(){
             if (result.scores[1]>=0.9) {
               NF(classLabels[1]);
               alert(classLabels[1]);
-             document.getElementById("1234").innerHTML="<font color='blue'>紅燈</font>";
+             document.getElementById("1234").innerHTML="<font color='red'>紅燈</font>";
               }
               if (result.scores[2]>=0.9) {
               NF(classLabels[2]);
               alert(classLabels[2]);
-             document.getElementById("1234").innerHTML="<font color='blue'>綠燈</font>";
+             document.getElementById("1234").innerHTML="<font color='green'>綠燈</font>";
              }
              if (result.scores[3]>=0.9) {
               NF(classLabels[3]);
               alert(classLabels[3]);
-             document.getElementById("1234").innerHTML="<font color='blue'>閃燈</font>";
+             document.getElementById("1234").innerHTML="<font color='yellow'>閃燈</font>";
               }
               if (result.scores[4]>=0.9) {
               NF(classLabels[4]);
               alert(classLabels[4]);
-             document.getElementById("1234").innerHTML="<font color='blue'>救護車</font>";
+             document.getElementById("1234").innerHTML="<font color='white'>救護車</font>";
               }
               if (result.scores[5]>=0.9) {
               NF(classLabels[5]);
               alert(classLabels[5]);
-             document.getElementById("1234").innerHTML="<font color='blue'>消防車</font>";
+             document.getElementById("1234").innerHTML="<font color='white'>消防車</font>";
               }
               if (result.scores[6]>=0.9) {
               NF(classLabels[6]);
               alert(classLabels[6]);
-             document.getElementById("1234").innerHTML="<font color='blue'>火警鐘</font>";
+             document.getElementById("1234").innerHTML="<font color='red'>火警鐘</font>";
               }
               if (result.scores[7]>=0.9) {
               NF(classLabels[7]);
               alert(classLabels[7]);
-             document.getElementById("1234").innerHTML="<font color='blue'>叫你</font>";
+             document.getElementById("1234").innerHTML="<font color='black'>叫你</font>";
               }
-              if (result.scores[8]>=0.9 && "to"=="to荃灣") {
+              if (result.scores[8]>=0.9 && "to"="to荃灣") {
               NF(classLabels[8]);
               alert(classLabels[8]);
              document.getElementById("1234").innerHTML="<font color='blue'>荃灣站</font>";
               }
-              if (result.scores[9]>=0.9 && "to"=="to荔景") {
+              if (result.scores[9]>=0.9 && "to"="to荔景") {
               NF(classLabels[9]);
               alert(classLabels[9]);
              document.getElementById("1234").innerHTML="<font color='blue'>荔景站</font>";
               }
-              if (result.scores[10]>=0.9 && "to"=="to葵芳") {
+              if (result.scores[10]>=0.9 && "to"="to葵芳") {
               NF(classLabels[10]);
               alert(classLabels[10]);
              document.getElementById("1234").innerHTML="<font color='blue'>葵芳站</font>";
@@ -169,12 +169,12 @@ function NF(){
               if (result.scores[11]>=0.9) {
               NF(classLabels[11]);
               alert(classLabels[11]);
-             document.getElementById("1234").innerHTML="<font color='blue'>警車</font>";
+             document.getElementById("1234").innerHTML="<font color='white'>警車</font>";
               }
               if (result.scores[12]>=0.9) {
               NF(classLabels[12]);
               alert(classLabels[12]);
-             document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
+             document.getElementById("1234").innerHTML="<font color='red'>有車</font>";
              }
         }, {
             includeSpectrogram: true, // in case listen should return result.spectrogram
