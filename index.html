@@ -131,62 +131,46 @@ function NF(){
               alert(classLabels[3]);
              document.getElementById("1234").innerHTML="<font color='blue'>閃燈</font>";
               }
-              if (result.scores[4]>=0.9  && option value="to大窩口") {
+              if (result.scores[4]>=0.9) {
               NF(classLabels[4]);
               alert(classLabels[4]);
-             document.getElementById("1234").innerHTML="<font color='blue'>大窩口站</font>";
+             document.getElementById("1234").innerHTML="<font color='blue'>救護車</font>";
               }
               if (result.scores[5]>=0.9) {
               NF(classLabels[5]);
               alert(classLabels[5]);
-             document.getElementById("1234").innerHTML="<font color='blue'>救護車</font>";
+             document.getElementById("1234").innerHTML="<font color='blue'>消防車</font>";
               }
               if (result.scores[6]>=0.9) {
               NF(classLabels[6]);
               alert(classLabels[6]);
-             document.getElementById("1234").innerHTML="<font color='blue'>消防車</font>";
+             document.getElementById("1234").innerHTML="<font color='blue'>火警鐘</font>";
               }
               if (result.scores[7]>=0.9) {
               NF(classLabels[7]);
               alert(classLabels[7]);
-             document.getElementById("1234").innerHTML="<font color='blue'>火警鐘</font>";
-              }
-              if (result.scores[8]>=0.9) {
-              NF(classLabels[8]);
-              alert(classLabels[8]);
              document.getElementById("1234").innerHTML="<font color='blue'>叫你</font>";
               }
-              if (result.scores[9]>=0.9 && option value="to荃灣") {
-              NF(classLabels[9]);
-              alert(classLabels[9]);
-             document.getElementById("1234").innerHTML="<font color='blue'>荃灣站</font>";
-              }
-              if (result.scores[10]>=0.9 && option value="to荔景") {
-              NF(classLabels[10]);
-              alert(classLabels[10]);
+              if (result.scores[8]>=0.9 && option value="to荔景") {
+              NF(classLabels[8]);
+              alert(classLabels[8]);
              document.getElementById("1234").innerHTML="<font color='blue'>荔景站</font>";
               }
-              if (result.scores[11]>=0.9 && option value="to葵興") {
-              NF(classLabels[11]);
-              alert(classLabels[11]);
-             document.getElementById("1234").innerHTML="<font color='blue'>葵興站</font>";
-              }
-              if (result.scores[12]>=0.9 && option value="to葵芳") {
-              NF(classLabels[12]);
-              alert(classLabels[12]);
+              if (result.scores[9]>=0.9 && option value="to葵芳") {
+              NF(classLabels[9]);
+              alert(classLabels[9]);
              document.getElementById("1234").innerHTML="<font color='blue'>葵芳站</font>";
               }
-              if (result.scores[13]>=0.9) {
-              NF(classLabels[13]);
-              alert(classLabels[13]);
+              if (result.scores[10]>=0.9) {
+              NF(classLabels[10]);
+              alert(classLabels[10]);
              document.getElementById("1234").innerHTML="<font color='blue'>警車</font>";
               }
-              if (result.scores[14]>=0.9) {
-              NF(classLabels[14]);
-              alert(classLabels[14]);
+              if (result.scores[11]>=0.9) {
+              NF(classLabels[11]);
+              alert(classLabels[11]);
              document.getElementById("1234").innerHTML="<font color='blue'>有車</font>";
              }
-
         }, {
             includeSpectrogram: true, // in case listen should return result.spectrogram
             probabilityThreshold: 0.75,
