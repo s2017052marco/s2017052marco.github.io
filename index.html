@@ -116,8 +116,8 @@ function NF(){
                 const classPrediction = classLabels[i] + ": " + result.scores[i].toFixed(2);
                 labelContainer.childNodes[i].innerHTML = classPrediction;
             }
-            var e =document.getElementById("go to");
-            var go to=e.options[e.selectedIndex].value;
+            var e =document.getElementById("goto");
+            var goto=e.options[e.selectedIndex].value;
 
             if (result.scores[1]>=0.9) {
               NF(classLabels[1]);
@@ -154,17 +154,17 @@ function NF(){
               alert(classLabels[7]);
              document.getElementById("1234").innerHTML="<font color='black'>叫你</font>";
               }
-              if (result.scores[8]>=0.9 && go to=="to荃灣") {
+              if (result.scores[8]>=0.9 && goto=="to荃灣") {
               NF(classLabels[8]);
               alert(classLabels[8]);
              document.getElementById("1234").innerHTML="<font color='blue'>荃灣站</font>";
               }
-              if (result.scores[9]>=0.9 && go to=="to荔景") {
+              if (result.scores[9]>=0.9 && goto=="to荔景") {
               NF(classLabels[9]);
               alert(classLabels[9]);
              document.getElementById("1234").innerHTML="<font color='blue'>荔景站</font>";
               }
-              if (result.scores[10]>=0.9 && go to=="to葵芳") {
+              if (result.scores[10]>=0.9 && goto=="to葵芳") {
               NF(classLabels[10]);
               alert(classLabels[10]);
              document.getElementById("1234").innerHTML="<font color='blue'>葵芳站</font>";
