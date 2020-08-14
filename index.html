@@ -116,8 +116,8 @@ function NF(){
                 const classPrediction = classLabels[i] + ": " + result.scores[i].toFixed(2);
                 labelContainer.childNodes[i].innerHTML = classPrediction;
             }
-            var e =document.getElementById("goto");
-            var goto=e.options[e.selectedIndex].value;
+            var e = document.getElementById("goto");
+            var goto = e.options[e.selectedIndex].value;
 
             if (result.scores[1]>=0.9) {
               NF(classLabels[1]);
@@ -194,7 +194,7 @@ function NF(){
   <h3 align="center">MTR	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/MTR_logo.svg/1265px-MTR_logo.svg.png" width="63.25" height="51.2">
 </h3>
   <h4 align="center">去
-<select name="to" id="go to">
+<select name="to" id="goto">
   <option value=""></option>
 　<option value="to荃灣">荃灣</option>
 　<option value="to葵芳">葵芳</option>
